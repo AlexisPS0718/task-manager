@@ -1,4 +1,4 @@
-from flask import g
+from flask import g # type: ignore
 import sqlite3
 
 DATABASE_URL = "main.db"

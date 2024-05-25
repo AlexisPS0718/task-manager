@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request # type: ignore
 from app.database import task
 
 app = Flask(__name__)
@@ -30,7 +30,7 @@ def create_task():
 @app.put("/tasks/<int:pk>")
 def update_task(pk):
   task_data = request.json
-  task.update_by_id(task_data)
+  task.update_by_id(task_data, pk)
   return "", 204
 
 @app.delete("/tasks/<int:pk>")

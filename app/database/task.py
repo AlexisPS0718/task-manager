@@ -30,11 +30,11 @@ def select_by_id(task_id):
   return {}
 
 def insert(task_data):
-  value_tuple = {
+  value_tuple = (
     task_data.get("name"),
     task_data.get("summary"),
     task_data.get("description")
-  }
+  )
   statement = """
     INSERT INTO task (
       name,
@@ -47,13 +47,13 @@ def insert(task_data):
   conn.commit()
 
 def update_by_id(task_data, task_id):
-  statement_tuple = {
+  statement_tuple = (
     task_data.get("name"),
     task_data.get("summary"),
     task_data.get("description"),
     task_data.get("is_done"),
     task_id
-  }
+  )
   statement = """
     UPDATE task SET
       name = ?,
