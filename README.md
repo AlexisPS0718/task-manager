@@ -10,7 +10,7 @@ Task manager project made with Python and Flask.
 `source venv\bin\activate`
 
 **Install Flask** \
-`pip3 install flask"`
+`pip3 install flask`
 
 **How to run** \
 `sh run_local.sh`
